@@ -1,16 +1,26 @@
-# Silva-Baileys
+<p align="center">
+  <img src="./assets/logo.png" alt="Silva Baileys Logo" width="200"/>
+</p>
 
-A WebSocket-based JavaScript library for interacting with the WhatsApp Web API.
+<h1 align="center">Silva-Baileys</h1>
 
-[![npm version](https://img.shields.io/npm/v/silva-baileys.svg)](https://www.npmjs.com/package/silva-baileys)
-[![npm downloads](https://img.shields.io/npm/dm/silva-baileys.svg)](https://www.npmjs.com/package/silva-baileys)
-[![License](https://img.shields.io/npm/l/silva-baileys.svg)](https://github.com/silvagift/silva-baileys/blob/main/LICENSE)
+<p align="center">
+  A fast, lightweight, full-featured WhatsApp Web API library for Node.js
+</p>
 
-> Forked from [gifted-baileys](https://www.npmjs.com/package/gifted-baileys) by [Gifted Tech](https://baileys.giftedtech.co.ke) with permission.
+<p align="center">
+  <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/v/silva-baileys.svg?style=flat-square&color=25D366" alt="npm version"/></a>
+  <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/dm/silva-baileys.svg?style=flat-square&color=25D366" alt="npm downloads"/></a>
+  <a href="https://github.com/SilvaTechB/silva-baileys/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/silva-baileys.svg?style=flat-square" alt="License"/></a>
+</p>
+
+---
 
 ## Disclaimer
 
 This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or affiliates. Use at your own discretion. Do not spam people with this. We discourage any stalkerware, bulk or automated messaging usage.
+
+---
 
 ## Installation
 
@@ -18,15 +28,15 @@ This project is not affiliated, associated, authorized, endorsed by, or in any w
 npm install silva-baileys
 ```
 
-Or using yarn:
-
 ```bash
 yarn add silva-baileys
 ```
 
+---
+
 ## Quick Start
 
-### CommonJS (Recommended)
+### CommonJS
 
 ```javascript
 const { default: makeWASocket, useMultiFileAuthState, Browsers } = require('silva-baileys')
@@ -38,6 +48,8 @@ const { default: makeWASocket, useMultiFileAuthState, Browsers } = require('silv
 import pkg from 'silva-baileys'
 const { default: makeWASocket, useMultiFileAuthState, Browsers } = pkg
 ```
+
+---
 
 ## Basic Usage
 
@@ -77,20 +89,25 @@ async function connectToWhatsApp() {
 connectToWhatsApp()
 ```
 
+---
+
 ## Features
 
 - Full WhatsApp Web API support
 - Multi-device support with QR code and pairing code authentication
 - LID (Link ID) addressing support for both personal chats and groups
-- Group status/story sending functionality
+- Group status/story sending
 - Session management and restoration
-- Message sending, receiving, and manipulation
+- Send & receive messages, media, documents, stickers
 - Group management
-- Privacy settings
+- Privacy settings control
 - Profile management
+- Newsletter support
 - And much more!
 
-## API
+---
+
+## API Reference
 
 ### `makeWASocket(config)`
 
@@ -114,24 +131,23 @@ const { state, saveCreds } = await useMultiFileAuthState('./auth_info')
 ### Sending Messages
 
 ```javascript
-// Send a text message
+// Text message
 await sock.sendMessage(jid, { text: 'Hello!' })
 
-// Send an image
+// Image with caption
 await sock.sendMessage(jid, { image: { url: './image.jpg' }, caption: 'Look at this!' })
 
-// Send a video
+// Video
 await sock.sendMessage(jid, { video: { url: './video.mp4' }, caption: 'Check this out' })
 
 // Reply to a message
 await sock.sendMessage(jid, { text: 'This is a reply' }, { quoted: msg })
+
+// Send with mentions
+await sock.sendMessage(jid, { text: '@user', mentions: [userJid] })
 ```
 
-## Credits
-
-This package is a fork of [gifted-baileys](https://www.npmjs.com/package/gifted-baileys), originally created by [Gifted Tech](https://baileys.giftedtech.co.ke). Forked with permission.
-
-The original Baileys library was created by [@adiwajshing](https://github.com/adiwajshing) and is maintained by [WhiskeySockets](https://github.com/WhiskeySockets/Baileys).
+---
 
 ## License
 
