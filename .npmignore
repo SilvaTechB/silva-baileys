@@ -1,0 +1,8 @@
+.gitignore
+*.md
+!README.md
+engine-requirements.jslib
+node_modules/
+auth_info*/
+session*/
+*.tgz
