@@ -10,8 +10,11 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/v/silva-baileys.svg?style=flat-square&color=25D366" alt="npm version"/></a>
-  <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/dm/silva-baileys.svg?style=flat-square&color=25D366" alt="npm downloads"/></a>
-  <a href="https://github.com/SilvaTechB/silva-baileys/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/silva-baileys.svg?style=flat-square" alt="License"/></a>
+  <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/dm/silva-baileys.svg?style=flat-square&color=128C7E" alt="Monthly Downloads"/></a>
+  <a href="https://www.npmjs.com/package/silva-baileys"><img src="https://img.shields.io/npm/dt/silva-baileys.svg?style=flat-square&color=075E54" alt="Total Downloads"/></a>
+  <a href="https://github.com/SilvaTechB/silva-baileys/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License: MIT"/></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/node/v/silva-baileys.svg?style=flat-square&color=339933" alt="Node.js Version"/></a>
+  <a href="https://github.com/SilvaTechB/silva-baileys/stargazers"><img src="https://img.shields.io/github/stars/SilvaTechB/silva-baileys?style=flat-square&color=yellow" alt="GitHub Stars"/></a>
 </p>
 
 ---
