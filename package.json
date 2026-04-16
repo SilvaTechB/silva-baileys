@@ -1,19 +1,34 @@
 {
     "name": "silva-baileys",
-    "version": "1.0.0",
-    "description": "A lightweight, full-featured WhatsApp Web API library for Node.js — forked from gifted-baileys with permission",
+    "version": "1.0.1",
+    "description": "A fast, lightweight, full-featured WhatsApp Web API library for Node.js",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
-    "homepage": "https://github.com/silvagift/silva-baileys#readme",
+    "homepage": "https://github.com/SilvaTechB/silva-baileys#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/silvagift/silva-baileys.git"
+        "url": "git+https://github.com/SilvaTechB/silva-baileys.git"
     },
     "bugs": {
-        "url": "https://github.com/silvagift/silva-baileys/issues"
+        "url": "https://github.com/SilvaTechB/silva-baileys/issues"
     },
-    "author": "Silva",
+    "author": "Silva Tech <silvatechb@users.noreply.github.com>",
     "license": "MIT",
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "files": [
+        "lib",
+        "WAProto",
+        "assets",
+        "engine-requirements.js",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "postinstall": "node engine-requirements.js",
+        "test": "node -e \"const s = require('./lib/index.js'); console.log('silva-baileys loaded OK. Exports:', Object.keys(s).length, 'items')\""
+    },
     "keywords": [
         "whatsapp",
         "whatsapp-api",
@@ -22,7 +37,9 @@
         "silva-baileys",
         "whatsapp-bot",
         "messaging",
-        "chat"
+        "chat",
+        "multi-device",
+        "websocket"
     ],
     "dependencies": {
         "@cacheable/node-cache": "^1.4.0",
@@ -31,7 +48,7 @@
         "axios": "^1.6.0",
         "libsignal": "github:WhiskeySockets/libsignal-node",
         "lodash": "^4.17.21",
-        "music-metadata": "^7.12.3",
+        "music-metadata": "^11.12.3",
         "node-fetch": "^2.6.1",
         "pino": "^9.6",
         "protobufjs": "^7.2.4",
